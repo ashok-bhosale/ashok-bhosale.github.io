@@ -1,86 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Software Architect Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashok Bhosale | Full Stack Architect</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .blue-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .about-section {
+            background-image: linear-gradient(to bottom, #f7f7f7, #fff);
+            padding: 20px;
+        }
+        .skills-section {
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+        .experience-section {
+            background-color: #fff;
+            padding: 20px;
+        }
+        .projects-section {
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+        .education-section {
+            background-color: #fff;
+            padding: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        @media only screen and (max-width: 768px) {
+            .section {
+                margin-bottom: 10px;
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .section {
+                margin-bottom: 5px;
+            }
+            .header {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Ashok Bhosale</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="hero">
-    <div class="hero-text">
-      <h2>Hi, I'm Ashok Bhosale</h2>
-      <p>A Software Architect passionate about building scalable solutions.</p>
-      <a href="#projects" class="btn">View Projects</a>
+    <div class="ui stackable grid container">
+        <div class="sixteen wide column">
+            <div class="blue-header">
+                <h1 class="header">Ashok Bhosale</h1>
+            </div>
+        </div>
+        <div class="sixteen wide column">
+            <div class="section about-section">
+                <h2 class="header">About Me</h2>
+                <p>I am a Manager and Full Stack Architect with over 15 years of experience in designing, developing, and maintaining software applications and systems. My expertise lies in crafting innovative, cost-effective solutions for complex problems. I have a proven track record of achieving measurable results, including a 30% improvement in software performance, a 40% reduction in costs, and a 70% increase in customer satisfaction.</p>
+                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+            </div>
+        </div>
+        <div class="sixteen wide column">
+            <div class="section skills-section">
+                <h2 class="header">Technical Skills</h2>
+                <p><strong>Programming Languages:</strong> C#, JavaScript, Python, Java, TypeScript, SQL, T-SQL, HTML, CSS, PowerShell</p>
+                <p><strong>Web Technologies:</strong> ASP.NET, React.js, Angular, Vue, Node.js, REST API, GraphQL, WPF, Web API, SOAP</p>
+                <p><strong>Cloud Platforms:</strong> AWS, Azure, Google Cloud (GCP)</p>
+                <p><strong>DevOps Tools:</strong> Docker, Kubernetes, CI/CD, Jenkins, Git, GitHub, Terraform</p>
+                <p><strong>Database Management:</strong> SQL Server, MySQL, PostgreSQL, Oracle</p>
+                <p><strong>Microservices:</strong> Microservice Architecture, Docker, Kubernetes, Cloud-native, Service Oriented Architecture (SOA), Event driven, Onion, Hexagonal, Clean Architecture. CQRS, RESTFUL, n-tier, Pub-Sub, Event Source, MVC, MVVM Architecture.</p>
+                <p><strong>Hybrid Microservice:</strong> Hybrid Microservices .NET core, Node JS, Java (spring boot), Python (Flask, Fast-API, Django)</p>
+                <p><strong>Frameworks:</strong> .NET Core, .NET Framework, Express.js, Angular</p>
+                <p><strong>CSS Framework:</strong> CSS3, Semantic UI, Bootstrap 5, Material UI, Tailwind</p>
+                <p><strong>Testing Frameworks:</strong> JUnit, NUnit, Mocha, Jest, React Testing Library</p>
+                <p><strong>Version Control:</strong> Git, TFS</p>
+                <p><strong>Agile Methodologies:</strong> Scrum</p>
+                <p><strong>Containerization:</strong> Docker, Kubernetes</p>
+                <p><strong>Virtualization and Cloud Platforms:</strong> Azure Kubernetes Service (AKS), AWS Elastic Kubernetes Service (EKS), Google Cloud Kubernetes Engine (GKE)</p>
+            </div>
+        </div>
+        <div class="sixteen wide column">
+            <div class="section experience-section">
+                <h2 class="header">Professional Experience</h2>
+                <h3>Manager, Full Stack Architect</h3>
+                <p>Capgemini, India, Mumbai</p>
+                <p>September 2024 - Present</p>
+                <ul>
+                    <li>Lead full-stack architecture and development for enterprise-grade solutions.</li>
+                    <li>Oversee customer-facing projects, ensuring high performance and seamless integration.</li>
+                    <li>Champion cloud computing, microservices architecture, and quality assurance initiatives.</li>
+                </ul>
+                <h3>Senior Software Engineer</h3>
+                <p>GE Vernova, India, Bangalore</p>
+                <p>February 2012 - July 2024</p>
+                <ul>
+                    <li>Led development and deployment of microservices and cloud-based solutions across multiple projects.</li>
+                    <li>Migrated monolithic applications to microservices-based architecture using Docker and Kubernetes.</li>
+                    <li>Handled quality assurance and performance testing to ensure 99% uptime and reduced latency.</li>
+                    <li>Designed and optimized REST APIs for enterprise-grade applications, integrating with AWS and Azure.</li>
+                </ul>
+                <h3>Senior Software Engineer</h3>
+                <p>Sonata Software Ltd., India, Bangalore</p>
+                <p>May 2010 - February 2012</p>
+                <ul>
+                    <li>Worked on enterprise applications for Microsoft, focusing on ERP solutions and performance testing.</li>
+                    <li>Developed benchmarking and automated testing tools for Microsoft ERP (Dynamics Axapta).</li>
+                    <li>Contributed to the maintenance and enhancement of web applications for UK-based clients.</li>
+                </ul>
+                <h3>Software Engineer</h3>
+                <p>Tricom Information Technology, India, Mumbai</p>
+                <p>February 2008 - October 2009</p>
+                <ul>
+                    <li>Worked on ERP implementation and web applications for clients in various industries.</li>
+                    <li>Developed and maintained applications such as the Challan System and Daily Activity Recorder for Salesmen.</li>
+                    <li>Built FTP downloader and medical token management systems using WPF and ASP.NET.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="sixteen wide column">
+            <div class="section projects-section">
+                <h2 class="header">Projects</h2>
+                <h3>Collibra Marketplace App – Kimberly-Clark</h3>
+                <p>India, Mumbai</p>
+                <p>September 2024 - March 2025</p>
+                <ul>
+                    <li>Led a 3-member team to develop the Collibra Marketplace app, integrating Angular frontend with REST API and GraphQL backend.</li>
+                    <li>Focused on architecture, UI/UX development, performance optimization, and ticket management.</li>
+                    <li>Acted as Full Stack Architect and Manager, collaborating with stakeholders to ensure successful delivery.</li>
+                </ul>
+                <h3>Microservice Architecture & Best Practices</h3>
+                <p>India, Bangalore</p>
+                <p>February 2012 - July 2024</p>
+                <ul>
+                    <li>Developed and implemented microservices for client-side applications, including Import-Export, Scheduler Service, Localization, and more.</li>
+                    <li>Designed cloud-based architecture on AWS, GCP, and Azure, focusing on scalability, performance, and fault tolerance.</li>
+                    <li>Published best practices and deployment strategies for microservices on GitHub.</li>
+                    <li><a href="https://github.com/ashok-bhosale/microservices/tree/main/Best%20Practices">Link to GitHub: Microservice Best Practices</a></li>
+                </ul>
+                <h3>Asset Performance Management (APM)</h3>
+                <p>India, Mumbai</p>
+                <p>February 2012 - July 2024</p>
+                <ul>
+                    <li>Migrated and enhanced legacy applications to Single Page Applications (SPA) using Angular and React.</li>
+                    <li>Transitioned to microservices architecture, focusing on Docker and EKS deployments.</li>
+                    <li>Managed various modules including User Authentication, SSO, and Integration with Active Directory and Azure.</li>
+                </ul>
+                <h3>Microsoft ERP - Dynamic Axapta Performance Team Tools</h3>
+                <p>May 2010 - February 2012</p>
+                <ul>
+                    <li>Developed, managed, and ran various PowerShell scripts, Windows, WPF, Console, and ASP.NET applications for the performance team of Microsoft (Sonata Software client).</li>
+                    <li>Prepared benchmarks for automated testing of the ERP system (Dynamic Axapta).</li>
+                </ul>
+                <h3>UK-Based ASP.NET Web Application Maintenance</h3>
+                <p>May 2010 - February 2012</p>
+                <ul>
+                    <li>Worked with the client, Cable and Wireless UK (now part of Vodafone), to fix bugs, implement new features, and maintain a British website.</li>
+                    <li>Worked in UK shifts and had the opportunity to work directly with the UK client.</li>
+                </ul>
+                <h3>ERP Implementation (Client Side)</h3>
+                <p>February 2008 - October 2009</p>
+                <ul>
+                    <li>Worked with Zenith Yash Birla Group on ERP implementation for a steel company at their Khopoli factory in Mumbai.</li>
+                    <li>Hybrid application involving ASP.NET Web and WPF applications for ERP functionality.</li>
+                </ul>
+                <h3>Challan System Web Application</h3>
+                <p>February 2008 - October 2009</p>
+                <ul>
+                    <li>Developed an ASP.NET web-based application for maintaining challan information across the Tricom department.</li>
+                    <li>Created a central repository to reduce human errors, maintaining a zero-error ratio across QA, HOD, and Account phases.</li>
+                </ul>
+                <h3>US-Based Salesman Daily Activity Recorder Web Application</h3>
+                <p>February 2008 - October 2009</p>
+                <ul>
+                    <li>Developed an ASP.NET web application for US-based salesmen to record daily activities.</li>
+                    <li>Integrated time zone management for activity recording based on different zones (PST, MST, CST, EST), with administrator access for logs and edits.</li>
+                </ul>
+                <h3>Multi-threaded FTP Downloader</h3>
+                <p>February 2008 - October 2009</p>
+                <ul>
+                    <li>Developed a WPF multi-threaded Windows application to connect to FTP servers and download files from specified directories.</li>
+                    <li>Implemented a POC to split a large file into 10 parts, each handled by a thread, and then merged the parts after download.</li>
+                </ul>
+                <h3>Data Transfer Tool (Export-Import)</h3>
+                <p>February 2008 - October 2009</p>
+                <ul>
+                    <li>Worked on a .NET-based WPF application for data transfer between servers.</li>
+                    <li>Automated the extraction, zipping, and transfer of files between FTP servers in Nashik and Chennai, followed by data processing and import.</li>
+                </ul>
+                <h3>Medical Token Management System</h3>
+                <p>February 2008 - October 2009</p>
+                <ul>
+                    <li>Developed a TCP-based medical token queuing system using socket programming.</li>
+                    <li>Enabled real-time communication between admin devices and display boards for patient token management.</li>
+                </ul>
+                <h3>Arqam Financial Accounting ERP System</h3>
+                <p>February 2008 - October 2009</p>
+                <ul>
+                    <li>Contributed to bug fixing, enhancements, new development, and workflow testing for various modules in the Saudi Arabian Gulf ERP system, including General Ledger, Accounts Payable, Accounts Receivable, Payroll, and Inventory.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="sixteen wide column">
+            <div class="section education-section">
+                <h2 class="header">Education</h2>
+                <table>
+                    <tr>
+                        <th>Degree</th>
+                        <th>Institution</th>
+                        <th>Year</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>B.Sc. IT</td>
+                        <td>Mumbai University, India</td>
+                        <td>2005 - 2007</td>
+                        <td>Passed with distinction (78%)</td>
+                    </tr>
+                    <tr>
+                        <td>XII</td>
+                        <td>MH College, India</td>
+                        <td>2003 - 2004</td>
+                        <td>Passed with distinction (78.50%)</td>
+                    </tr>
+                    <tr>
+                        <td>SSC</td>
+                        <td>SDM School, Mumbai Board, India</td>
+                        <td>2001 - 2002</td>
+                        <td>Passed with distinction (77.46%)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="sixteen wide column">
+            <div class="section">
+                <h2 class="header">Awards & Recognition</h2>
+                <p>Best Performer Award</p>
+                <p>Recognized for outstanding contributions and leadership in delivering high-quality software solutions.</p>
+            </div>
+        </div>
+        <div class="sixteen wide column">
+            <div class="section">
+                <h2 class="header">Certifications & Courses</h2>
+                <p>Cloud and DevOps Advanced Master Program</p>
+                <p>Intellipath (2024)</p>
+                <p>Python, AI, Machine Learning, IoT, Generative AI</p>
+                <p>Pantech Solutions (2024)</p>
+            </div>
+        </div>
+        <div class="sixteen wide column">
+            <div class="section">
+                <h2 class="header">Professional Links</h2>
+                <p><a href="https://github.com/ashok-bhosale">GitHub Profile</a></p>
+                <p><a href="https://www.linkedin.com/in/ashok-bhosale-64044a31b/">LinkedIn Profile</a></p>
+            </div>
+        </div>
     </div>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a Full Stack Software Architect with expertise in building microservices, cloud-based architectures, and scalable solutions for diverse industries. With 15+ years of experience, I thrive on solving complex problems and mentoring teams.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skill-card">Node.js</div>
-      <div class="skill-card">Angular</div>
-      <div class="skill-card">GraphQL</div>
-      <div class="skill-card">AWS</div>
-      <div class="skill-card">Azure</div>
-      <div class="skill-card">Python</div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Project 1</h3>
-        <p>Scalable SaaS platform for small businesses with cost optimization.</p>
-        <a href="#" class="btn">View Details</a>
-      </div>
-      <div class="project-card">
-        <h3>Project 2</h3>
-        <p>Collibra-like Data Governance Tool from scratch.</p>
-        <a href="#" class="btn">View Details</a>
-      </div>
-      <div class="project-card">
-        <h3>Project 3</h3>
-        <p>Rich Angular Material UI built from Figma wireframes.</p>
-        <a href="#" class="btn">View Details</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Want to collaborate or hire me for your next project? Reach out!</p>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 John Doe. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 </body>
 </html>
