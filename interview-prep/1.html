@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ASP.NET Core Web API interview question and detailed explanation">
+<title>ASP.NET Core Web API — Interview Guide</title>
+<style>
+  :root{
+    --bg:#f4f7f3;
+    --surface:#fffdf8;
+    --surface-blue:#edf5fb;
+    --surface-green:#edf7f1;
+    --surface-purple:#f3eff9;
+    --surface-beige:#faf3e5;
+    --text:#29363d;
+    --muted:#607078;
+    --blue:#3978a8;
+    --blue-dark:#2e648e;
+    --green:#43806a;
+    --purple:#725b96;
+    --beige:#a77a42;
+    --border:#dce4e1;
+    --code:#eef2f1;
+    --code-border:#d7e0dd;
+    --shadow:0 8px 24px rgba(55,72,76,.08);
+    --radius:16px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;
+    line-height:1.75;
+    color:var(--text);
+    background:var(--bg);
+  }
+  a{color:var(--blue-dark);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .container{width:min(1120px,92%);margin:auto}
+
+  .hero{
+    padding:54px 0 42px;
+    background:linear-gradient(135deg,#eaf4f8 0%,#f4f1f8 52%,#faf4e8 100%);
+    border-bottom:1px solid var(--border);
+  }
+  .eyebrow{
+    display:inline-block;
+    padding:5px 12px;
+    border-radius:999px;
+    background:#e4f0f6;
+    color:#376b8c;
+    font-weight:700;
+    font-size:.84rem;
+    letter-spacing:.02em;
+  }
+  h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.15;margin:16px 0 12px;color:#31454d}
+  .lead{font-size:1.12rem;color:var(--muted);max-width:850px}
+  .hero-grid{display:grid;grid-template-columns:1fr 310px;gap:28px;align-items:center}
+  .quick-box{
+    background:rgba(255,253,248,.82);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:20px;
+    box-shadow:var(--shadow)
+  }
+  .quick-box strong{color:var(--blue-dark)}
+  .quick-box ul{margin:10px 0 0;padding-left:20px}
+
+  nav{
+    position:sticky;top:0;z-index:10;
+    background:rgba(255,253,248,.95);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner{display:flex;gap:8px;overflow:auto;padding:10px 0}
+  .nav-inner a{
+    white-space:nowrap;padding:7px 12px;border-radius:9px;
+    color:#4c5c63;font-size:.92rem
+  }
+  .nav-inner a:hover{background:#edf3f2;text-decoration:none}
+
+  main{padding:34px 0 60px}
+  section{margin-bottom:28px}
+  .card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:28px;
+    box-shadow:var(--shadow);
+  }
+  h2{font-size:1.65rem;line-height:1.3;margin:0 0 16px;color:#3a5663}
+  h3{font-size:1.18rem;color:#456873;margin:24px 0 10px}
+  p{margin:10px 0 16px}
+  .accent-blue{border-top:5px solid #76a9c8}
+  .accent-green{border-top:5px solid #78ae98}
+  .accent-purple{border-top:5px solid #a08bbd}
+  .accent-beige{border-top:5px solid #c5a06d}
+
+  .definition{
+    background:var(--surface-blue);
+    border:1px solid #d5e5ef;
+    border-radius:14px;
+    padding:20px;
+    margin:18px 0
+  }
+  .definition strong{color:#326886}
+
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .mini{
+    padding:19px;
+    border-radius:14px;
+    border:1px solid var(--border);
+  }
+  .mini.blue{background:var(--surface-blue)}
+  .mini.green{background:var(--surface-green)}
+  .mini.purple{background:var(--surface-purple)}
+  .mini.beige{background:var(--surface-beige)}
+  .mini h3{margin-top:0}
+
+  pre{
+    overflow:auto;
+    background:var(--code);
+    border:1px solid var(--code-border);
+    border-radius:12px;
+    padding:18px;
+    color:#34434a;
+    line-height:1.55;
+    font-size:.9rem;
+    tab-size:2;
+  }
+  code{
+    font-family:"Cascadia Code","Fira Code",Consolas,monospace;
+  }
+  :not(pre)>code{
+    background:#edf1ef;
+    border:1px solid #dce4e1;
+    padding:2px 6px;border-radius:6px;font-size:.9em
+  }
+
+  .callout{
+    border-left:5px solid var(--purple);
+    background:var(--surface-purple);
+    padding:16px 18px;
+    border-radius:0 12px 12px 0;
+    margin:18px 0
+  }
+  .success{border-left-color:var(--green);background:var(--surface-green)}
+  .note{border-left-color:var(--beige);background:var(--surface-beige)}
+
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+  th,td{padding:13px 14px;border:1px solid var(--border);text-align:left;vertical-align:top}
+  th{background:#eaf2f4;color:#3b5964;font-weight:700}
+  tr:nth-child(even) td{background:#fbfcfa}
+
+  ol,ul{padding-left:24px}
+  li{margin:5px 0}
+  .checklist li::marker{color:var(--green)}
+  .tag{
+    display:inline-block;margin:3px 4px 3px 0;padding:4px 9px;
+    border-radius:999px;background:#edf1f0;color:#52636a;font-size:.82rem
+  }
+
+  .footer{
+    text-align:center;padding:30px 0 45px;color:#718087;font-size:.9rem
+  }
+
+  @media(max-width:800px){
+    .hero-grid,.grid-2,.grid-3{grid-template-columns:1fr}
+    .card{padding:21px}
+    .hero{padding:40px 0 32px}
+    table{display:block;overflow-x:auto;white-space:normal}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">ASP.NET Core • Web API • Interview Guide</span>
+      <h1>What is ASP.NET Core Web API?</h1>
+      <p class="lead">
+        A practical, interview-ready explanation covering REST APIs, routing, controllers,
+        dependency injection, middleware, model binding, validation, authentication,
+        status codes, versioning, and a complete example.
+      </p>
+    </div>
+    <aside class="quick-box">
+      <strong>Interview definition</strong>
+      <p>
+        ASP.NET Core Web API is a framework for building HTTP-based services and RESTful APIs
+        using ASP.NET Core. It is cross-platform, high-performance, open-source, and designed
+        to serve clients such as web applications, mobile apps, desktop applications and other services.
+      </p>
+    </aside>
+  </div>
+</header>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="#definition">Definition</a>
+    <a href="#features">Features</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#example">Example</a>
+    <a href="#pipeline">Pipeline</a>
+    <a href="#binding">Binding</a>
+    <a href="#status">Status Codes</a>
+    <a href="#comparison">Comparison</a>
+    <a href="#interview">Interview Answer</a>
+  </div>
+</nav>
+
+<main class="container">
+
+<section id="definition" class="card accent-blue">
+  <h2>1. What is ASP.NET Core Web API?</h2>
+  <div class="definition">
+    <strong>Simple definition:</strong>
+    ASP.NET Core Web API is a part of the ASP.NET Core platform used to create HTTP APIs
+    that expose application functionality and data through endpoints such as
+    <code>GET</code>, <code>POST</code>, <code>PUT</code>, and <code>DELETE</code>.
+  </div>
+  <p>
+    A Web API normally acts as the backend between a client and application/business logic.
+    The client sends an HTTP request, the API processes it, communicates with services or a database,
+    and returns an HTTP response—commonly JSON.
+  </p>
+
+  <h3>Typical flow</h3>
+  <pre><code>Angular / React / Mobile / Other Service
+                    |
+                    | HTTP Request
+                    v
+            ASP.NET Core Web API
+                    |
+             Routing + Middleware
+                    |
+               Controller
+                    |
+             Business Service
+                    |
+               Repository
+                    |
+                 Database
+                    |
+                    v
+              JSON Response</code></pre>
+</section>
+
+<section id="features" class="card accent-green">
+  <h2>2. Important Features</h2>
+  <div class="grid-3">
+    <div class="mini blue"><h3>Cross-platform</h3><p>Runs on Windows, Linux and macOS through .NET.</p></div>
+    <div class="mini green"><h3>High performance</h3><p>Built on a lightweight HTTP pipeline and Kestrel web server.</p></div>
+    <div class="mini purple"><h3>Dependency Injection</h3><p>Built-in DI makes services easier to test and maintain.</p></div>
+    <div class="mini beige"><h3>Middleware</h3><p>Requests can pass through logging, authentication, exception handling and other middleware.</p></div>
+    <div class="mini blue"><h3>Routing</h3><p>Map HTTP requests to controller actions or minimal API endpoints.</p></div>
+    <div class="mini green"><h3>JSON & REST</h3><p>Commonly exposes resource-oriented endpoints returning JSON representations.</p></div>
+  </div>
+
+  <h3>Other capabilities</h3>
+  <span class="tag">Model Binding</span>
+  <span class="tag">Validation</span>
+  <span class="tag">Authorization</span>
+  <span class="tag">Authentication</span>
+  <span class="tag">OpenAPI / Swagger</span>
+  <span class="tag">Logging</span>
+  <span class="tag">Configuration</span>
+  <span class="tag">Health Checks</span>
+  <span class="tag">CORS</span>
+  <span class="tag">Caching</span>
+</section>
+
+<section id="architecture" class="card accent-purple">
+  <h2>3. Basic ASP.NET Core Web API Architecture</h2>
+  <pre><code>HTTP Request
+     |
+     v
++---------------------+
+| Middleware Pipeline  |
++---------------------+
+     |
+     v
++---------------------+
+| Routing              |
++---------------------+
+     |
+     v
++---------------------+
+| Controller / Endpoint|
++---------------------+
+     |
+     v
++---------------------+
+| Application Service  |
++---------------------+
+     |
+     v
++---------------------+
+| Repository / EF Core |
++---------------------+
+     |
+     v
++---------------------+
+| Database             |
++---------------------+</code></pre>
+
+  <p>
+    In a well-designed enterprise application, the controller should generally remain thin.
+    It receives the request, validates or delegates it, calls an application/service layer,
+    and converts the result into an appropriate HTTP response.
+  </p>
+
+  <div class="callout success">
+    <strong>Interview point:</strong> ASP.NET Core Web API is not the same thing as a database-access
+    technology. Entity Framework Core, Dapper, or another data-access library can be used underneath
+    the API, but they are separate concerns.
+  </div>
+</section>
+
+<section id="example" class="card accent-blue">
+  <h2>4. Complete Simple Web API Example</h2>
+
+  <h3>Step 1 — Create the project</h3>
+  <pre><code>dotnet new webapi -n ProductApi
+cd ProductApi
+dotnet run</code></pre>
+
+  <h3>Step 2 — Model</h3>
+  <pre><code>public class Product
+{
+    public int Id { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public decimal Price { get; set; }
+}</code></pre>
+
+  <h3>Step 3 — Controller</h3>
+  <pre><code>using Microsoft.AspNetCore.Mvc;
+
+[ApiController]
+[Route("api/[controller]")]
+public class ProductsController : ControllerBase
+{
+    private static readonly List&lt;Product&gt; Products =
+    [
+        new Product { Id = 1, Name = "Laptop", Price = 75000 },
+        new Product { Id = 2, Name = "Monitor", Price = 18000 }
+    ];
+
+    [HttpGet]
+    public ActionResult&lt;IEnumerable&lt;Product&gt;&gt; GetAll()
+    {
+        return Ok(Products);
+    }
+
+    [HttpGet("{id:int}")]
+    public ActionResult&lt;Product&gt; GetById(int id)
+    {
+        var product = Products.FirstOrDefault(x =&gt; x.Id == id);
+
+        if (product == null)
+            return NotFound();
+
+        return Ok(product);
+    }
+
+    [HttpPost]
+    public ActionResult&lt;Product&gt; Create(Product product)
+    {
+        product.Id = Products.Count + 1;
+        Products.Add(product);
+
+        return CreatedAtAction(
+            nameof(GetById),
+            new { id = product.Id },
+            product);
+    }
+
+    [HttpDelete("{id:int}")]
+    public IActionResult Delete(int id)
+    {
+        var product = Products.FirstOrDefault(x =&gt; x.Id == id);
+
+        if (product == null)
+            return NotFound();
+
+        Products.Remove(product);
+        return NoContent();
+    }
+}</code></pre>
+
+  <h3>Step 4 — Test the endpoints</h3>
+  <table>
+    <thead><tr><th>HTTP Method</th><th>Endpoint</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td>GET</td><td><code>/api/products</code></td><td>Return all products</td></tr>
+      <tr><td>GET</td><td><code>/api/products/1</code></td><td>Return product 1</td></tr>
+      <tr><td>POST</td><td><code>/api/products</code></td><td>Create a product</td></tr>
+      <tr><td>DELETE</td><td><code>/api/products/1</code></td><td>Delete product 1</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Example POST request</h3>
+  <pre><code>POST /api/products
+Content-Type: application/json
+
+{
+  "name": "Keyboard",
+  "price": 2500
+}</code></pre>
+
+  <p>The API can respond with <code>201 Created</code> and a JSON representation of the newly created resource.</p>
+</section>
+
+<section id="pipeline" class="card accent-green">
+  <h2>5. Middleware Pipeline</h2>
+  <p>
+    Middleware components process HTTP requests and responses. They can perform cross-cutting
+    responsibilities such as exception handling, HTTPS redirection, authentication, authorization,
+    logging and endpoint routing.
+  </p>
+
+  <pre><code>Request
+  |
+  v
+Exception Handling
+  |
+  v
+HTTPS Redirection
+  |
+  v
+Authentication
+  |
+  v
+Authorization
+  |
+  v
+Routing / Endpoint
+  |
+  v
+Controller
+  |
+  v
+Response</code></pre>
+
+  <h3>Example custom middleware</h3>
+  <pre><code>public class RequestTimingMiddleware
+{
+    private readonly RequestDelegate _next;
+
+    public RequestTimingMiddleware(RequestDelegate next)
+    {
+        _next = next;
+    }
+
+    public async Task InvokeAsync(HttpContext context)
+    {
+        var start = DateTime.UtcNow;
+
+        await _next(context);
+
+        var elapsed = DateTime.UtcNow - start;
+        Console.WriteLine(
+            $"{context.Request.Path} took {elapsed.TotalMilliseconds} ms");
+    }
+}</code></pre>
+
+  <p>It can be registered with <code>app.UseMiddleware&lt;RequestTimingMiddleware&gt;()</code>.</p>
+</section>
+
+<section id="binding" class="card accent-beige">
+  <h2>6. Routing and Model Binding</h2>
+
+  <h3>Attribute routing</h3>
+  <pre><code>[ApiController]
+[Route("api/[controller]")]
+public class OrdersController : ControllerBase
+{
+    [HttpGet("{id:int}")]
+    public IActionResult GetOrder(int id)
+    {
+        return Ok(new { OrderId = id });
+    }
+}</code></pre>
+
+  <p>
+    A request such as <code>GET /api/orders/25</code> can bind <code>25</code> to the
+    <code>id</code> parameter automatically.
+  </p>
+
+  <h3>Binding from different request locations</h3>
+  <pre><code>[HttpGet]
+public IActionResult Search([FromQuery] string name)
+{
+    return Ok(name);
+}
+
+[HttpGet("{id}")]
+public IActionResult Get([FromRoute] int id)
+{
+    return Ok(id);
+}
+
+[HttpPost]
+public IActionResult Create([FromBody] Product product)
+{
+    return Ok(product);
+}</code></pre>
+
+  <div class="callout note">
+    <strong>Tip:</strong> With <code>[ApiController]</code>, ASP.NET Core provides automatic
+    API-focused behavior such as automatic HTTP 400 responses when model validation fails.
+  </div>
+</section>
+
+<section id="status" class="card accent-purple">
+  <h2>7. Common HTTP Status Codes</h2>
+  <table>
+    <thead><tr><th>Status</th><th>Meaning</th><th>Typical Web API use</th></tr></thead>
+    <tbody>
+      <tr><td>200 OK</td><td>Request succeeded</td><td>Successful GET or update returning content</td></tr>
+      <tr><td>201 Created</td><td>Resource created</td><td>Successful POST</td></tr>
+      <tr><td>204 No Content</td><td>Succeeded without response body</td><td>Successful DELETE or update</td></tr>
+      <tr><td>400 Bad Request</td><td>Invalid request</td><td>Validation or malformed input</td></tr>
+      <tr><td>401 Unauthorized</td><td>Authentication required/failed</td><td>Missing or invalid credentials</td></tr>
+      <tr><td>403 Forbidden</td><td>Authenticated but not allowed</td><td>Insufficient permissions</td></tr>
+      <tr><td>404 Not Found</td><td>Resource does not exist</td><td>Unknown ID or route</td></tr>
+      <tr><td>409 Conflict</td><td>Request conflicts with current state</td><td>Duplicate resource or concurrency conflict</td></tr>
+      <tr><td>500 Internal Server Error</td><td>Unexpected server failure</td><td>Unhandled application/server error</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="card accent-blue">
+  <h2>8. Dependency Injection Example</h2>
+  <p>
+    ASP.NET Core has built-in dependency injection. Instead of creating dependencies directly
+    inside controllers, register services and inject abstractions.
+  </p>
+
+  <pre><code>public interface IProductService
+{
+    IEnumerable&lt;Product&gt; GetProducts();
+}
+
+public class ProductService : IProductService
+{
+    public IEnumerable&lt;Product&gt; GetProducts()
+    {
+        return
+        [
+            new Product { Id = 1, Name = "Laptop", Price = 75000 }
+        ];
+    }
+}</code></pre>
+
+  <pre><code>// Program.cs
+builder.Services.AddScoped&lt;IProductService, ProductService&gt;();</code></pre>
+
+  <pre><code>[ApiController]
+[Route("api/products")]
+public class ProductsController : ControllerBase
+{
+    private readonly IProductService _service;
+
+    public ProductsController(IProductService service)
+    {
+        _service = service;
+    }
+
+    [HttpGet]
+    public IActionResult Get()
+    {
+        return Ok(_service.GetProducts());
+    }
+}</code></pre>
+
+  <p>
+    This improves separation of concerns and makes unit testing easier because a mock implementation
+    can be supplied to the controller.
+  </p>
+</section>
+
+<section class="card accent-green">
+  <h2>9. Authentication and Authorization</h2>
+  <p>
+    Web APIs frequently use JWT bearer authentication, OAuth/OpenID Connect, or another identity
+    mechanism. Authentication determines who the caller is; authorization determines what that caller
+    is allowed to do.
+  </p>
+
+  <pre><code>[Authorize]
+[HttpGet("admin")]
+public IActionResult GetAdminData()
+{
+    return Ok(new { Message = "Only authorized users can access this." });
+}</code></pre>
+
+  <p>
+    Role or policy-based authorization can further restrict endpoints. In production systems,
+    authentication and authorization should be configured centrally rather than implemented manually
+    in every controller.
+  </p>
+</section>
+
+<section id="comparison" class="card accent-beige">
+  <h2>10. ASP.NET Core Web API vs ASP.NET MVC</h2>
+  <table>
+    <thead>
+      <tr><th>Aspect</th><th>ASP.NET Core Web API</th><th>ASP.NET Core MVC</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Main purpose</td><td>Build HTTP APIs/services</td><td>Build web applications using MVC</td></tr>
+      <tr><td>Typical response</td><td>JSON / other API representations</td><td>HTML views, plus other response types</td></tr>
+      <tr><td>Client</td><td>Angular, React, mobile apps, services, etc.</td><td>Often browser-oriented server-rendered UI</td></tr>
+      <tr><td>Controller base</td><td>Commonly <code>ControllerBase</code></td><td>Commonly <code>Controller</code></td></tr>
+      <tr><td>Views</td><td>Normally no Razor view is required</td><td>Razor views are commonly used</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="card accent-purple">
+  <h2>11. Web API vs Minimal API</h2>
+  <p>
+    Modern ASP.NET Core also supports Minimal APIs. They allow endpoints to be defined with less
+    ceremony and are useful for small services, microservices, and focused HTTP endpoints.
+  </p>
+
+  <h3>Controller-based API</h3>
+  <pre><code>[ApiController]
+[Route("api/products")]
+public class ProductsController : ControllerBase
+{
+    [HttpGet]
+    public IActionResult Get()
+        =&gt; Ok(new[] { "Laptop", "Monitor" });
+}</code></pre>
+
+  <h3>Minimal API</h3>
+  <pre><code>var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+app.MapGet("/api/products", () =&gt;
+    Results.Ok(new[] { "Laptop", "Monitor" }));
+
+app.Run();</code></pre>
+
+  <div class="callout">
+    <strong>Interview point:</strong> Controller-based APIs and Minimal APIs are both ways of
+    building HTTP APIs in ASP.NET Core. The choice depends on application size, conventions,
+    team preferences, endpoint complexity, and architecture.
+  </div>
+</section>
+
+<section class="card accent-blue">
+  <h2>12. Enterprise Request Example</h2>
+  <p>Consider an enterprise endpoint:</p>
+  <pre><code>GET /api/vehicles/12345/status</code></pre>
+
+  <ol>
+    <li>Client sends an HTTP request.</li>
+    <li>Middleware handles cross-cutting concerns.</li>
+    <li>Authentication verifies the caller.</li>
+    <li>Authorization checks access.</li>
+    <li>Routing selects the appropriate endpoint.</li>
+    <li>Model binding converts route/query/body values into .NET objects.</li>
+    <li>The controller delegates to an application service.</li>
+    <li>The service applies business rules.</li>
+    <li>A repository or data-access component retrieves data.</li>
+    <li>The API returns a structured JSON response with an appropriate HTTP status code.</li>
+  </ol>
+
+  <pre><code>{
+  "vehicleId": "12345",
+  "status": "Active",
+  "lastUpdated": "2026-08-16T18:30:00Z"
+}</code></pre>
+</section>
+
+<section id="interview" class="card accent-green">
+  <h2>13. How to Answer in an Interview</h2>
+
+  <div class="definition">
+    <strong>Strong 30–45 second answer:</strong><br><br>
+    “ASP.NET Core Web API is a cross-platform, high-performance framework for building HTTP-based
+    APIs and RESTful services using ASP.NET Core. It allows us to expose business functionality
+    through endpoints such as GET, POST, PUT, and DELETE. It provides features such as routing,
+    middleware, dependency injection, model binding, validation, authentication and authorization.
+    APIs commonly return JSON and can be consumed by Angular, React, mobile applications or other
+    backend services. In enterprise applications, controllers typically delegate business logic
+    to services, which can then interact with repositories or databases.”
+  </div>
+
+  <h3>Follow-up questions an interviewer may ask</h3>
+  <ul class="checklist">
+    <li>What is REST?</li>
+    <li>What is the difference between REST and Web API?</li>
+    <li>What is middleware in ASP.NET Core?</li>
+    <li>What is dependency injection?</li>
+    <li>What is the difference between <code>Controller</code> and <code>ControllerBase</code>?</li>
+    <li>What is <code>[ApiController]</code>?</li>
+    <li>How does routing work?</li>
+    <li>What is model binding?</li>
+    <li>How do you implement JWT authentication?</li>
+    <li>How do you handle global exceptions?</li>
+    <li>How do you version a Web API?</li>
+    <li>How do you improve Web API performance?</li>
+    <li>What is the difference between controller-based APIs and Minimal APIs?</li>
+  </ul>
+</section>
+
+<section class="card accent-beige">
+  <h2>14. Key Takeaways</h2>
+  <ul>
+    <li><strong>ASP.NET Core Web API</strong> is used to build HTTP APIs and backend services.</li>
+    <li>It is <strong>cross-platform</strong> and built on modern .NET.</li>
+    <li>It supports <strong>routing, middleware, dependency injection, model binding and validation</strong>.</li>
+    <li>It integrates naturally with <strong>authentication and authorization</strong>.</li>
+    <li>APIs commonly communicate using <strong>JSON over HTTP</strong>.</li>
+    <li>It can be implemented using <strong>controllers or Minimal APIs</strong>.</li>
+    <li>For enterprise systems, separating controllers, services, and data access improves maintainability.</li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    ASP.NET Core Web API Interview Guide • Offline HTML • No Bootstrap CDN required
+  </div>
+</footer>
+
+</body>
+</html>
