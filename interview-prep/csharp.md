@@ -1,47 +1,49 @@
-# C# / .NET Interview Questions — Distinct & Categorized
+# Complete Interview Question Bank - All Categories
 
-> Consolidated from the uploaded **C Sharp Basic & Advanced.md** source. Repeated questions have been consolidated so each distinct question appears once.
+## 📊 High-Level Summary
 
-## Overview
+| Category | Question Count |
+|----------|---------------|
+| C# Fundamentals & Language Basics | 324 |
+| Types, Variables, Operators & Control Flow | 35 |
+| Object-Oriented Programming | 122 |
+| Collections, Iterators & Generics | 113 |
+| Delegates, Events, Lambdas & Functional C# | 64 |
+| LINQ & Expression Trees | 60 |
+| Exception Handling & Error Management | 64 |
+| Async, Multithreading & Concurrency | 129 |
+| Memory Management, GC & Resource Management | 108 |
+| .NET Runtime, CLR & Advanced C# Internals | 44 |
+| Reflection, Attributes, Serialization & I/O | 24 |
+| Dependency Injection & Application Infrastructure | 12 |
+| ASP.NET Core, Web API & Communication | 105 |
+| Entity Framework Core & Data Access | 41 |
+| Design Patterns, SOLID & Clean Architecture | 50 |
+| DDD, Microservices, Messaging & Distributed Systems | 84 |
+| Docker, Kubernetes, DevOps & Observability | 84 |
+| Cloud Architecture, Security & Reliability | 97 |
+| System Design & Performance Engineering | 28 |
+| Testing, Leadership & Architecture Governance | 42 |
+| ASP.NET MVC (Architect Level) | 100 |
+| ASP.NET Core Web API | 300 |
+| Entity Framework Core (Complete) | 150 |
+| Microservices & System Design | 150 |
+| Frontend (Angular/React) | 9 |
+| SQL Server & Database | 11 |
+| Soft Skills | 5 |
 
-- **Original question entries:** 1,950
-- **Repeated/near-identical entries consolidated:** 320
-- **Distinct questions retained:** **1,630**
-- **Categories:** **20**
-- **Organization:** beginner → advanced C# → .NET → web/API → data → architecture → cloud/security → system design.
+### Overall Statistics
 
-## Table of Contents
+| Metric | Count |
+|--------|-------|
+| **Total Distinct Questions** | **2,317** |
+| **Total Categories** | **27** |
+| **Primary Technology Areas** | 24 |
+| **Supplementary Categories** | 3 |
 
-1. [C# Fundamentals & Language Basics](#c#-fundamentals-and-language-basics)
-2. [Types, Variables, Operators & Control Flow](#types-variables-operators-and-control-flow)
-3. [Object-Oriented Programming](#object-oriented-programming)
-4. [Collections, Iterators & Generics](#collections-iterators-and-generics)
-5. [Delegates, Events, Lambdas & Functional C#](#delegates-events-lambdas-and-functional-c#)
-6. [LINQ & Expression Trees](#linq-and-expression-trees)
-7. [Exception Handling & Error Management](#exception-handling-and-error-management)
-8. [Async, Multithreading & Concurrency](#async-multithreading-and-concurrency)
-9. [Memory Management, GC & Resource Management](#memory-management-gc-and-resource-management)
-10. [.NET Runtime, CLR & Advanced C# Internals](#net-runtime-clr-and-advanced-c#-internals)
-11. [Reflection, Attributes, Serialization & I/O](#reflection-attributes-serialization-and-i/o)
-12. [Dependency Injection & Application Infrastructure](#dependency-injection-and-application-infrastructure)
-13. [ASP.NET Core, Web API & Communication](#aspnet-core-web-api-and-communication)
-14. [Entity Framework Core & Data Access](#entity-framework-core-and-data-access)
-15. [Design Patterns, SOLID & Clean Architecture](#design-patterns-solid-and-clean-architecture)
-16. [DDD, Microservices, Messaging & Distributed Systems](#ddd-microservices-messaging-and-distributed-systems)
-17. [Docker, Kubernetes, DevOps & Observability](#docker-kubernetes-devops-and-observability)
-18. [Cloud Architecture, Security & Reliability](#cloud-architecture-security-and-reliability)
-19. [System Design & Performance Engineering](#system-design-and-performance-engineering)
-20. [Testing, Leadership & Architecture Governance](#testing-leadership-and-architecture-governance)
+---
 
-## Deduplication Note
-
-- Exact repeats and near-identical wording such as `What is X?`, `X?`, and equivalent `What is a X?` forms were consolidated.
-- Questions with a different scope or deeper architectural focus were retained as separate questions.
-- The wording and terminology are based on the uploaded source; this file reorganizes rather than replaces the source material.
-
-## 1. C# Fundamentals & Language Basics
-
-**324 distinct questions**
+## Category 1: C# Fundamentals & Language Basics (324 Questions)
 
 1. What is C#?
 2. What are the features of C#?
@@ -108,7 +110,7 @@
 63. Types of constructors in C#?
 64. What is a static constructor?
 65. What is a destructor?
-66. What is the “using” keyword?
+66. What is the "using" keyword?
 67. What is type inference?
 68. What is `var` vs `dynamic`?
 69. What is the difference between const and readonly?
@@ -309,7 +311,7 @@
 264. Difference between ACID and BASE properties?
 265. Design idempotent consumers with message stores?
 266. Design poison message handling?
-267. Test end-to-end data flows (producer  broker  consumer)?
+267. Test end-to-end data flows (producer → broker → consumer)?
 268. Ensure idempotent writes to the database from consumers?
 269. ENTRYPOINT vs CMD?
 270. Deterministic builds with pinned base images?
@@ -368,9 +370,9 @@
 323. Immutable data structures and why use them?
 324. Scale Web API to handle 100K+ requests/min?
 
-## 2. Types, Variables, Operators & Control Flow
+---
 
-**35 distinct questions**
+## Category 2: Types, Variables, Operators & Control Flow (35 Questions)
 
 1. What are variables?
 2. Difference between var, dynamic, and object?
@@ -388,7 +390,7 @@
 14. What is dynamic typing?
 15. Types of operators in C#
 16. What is ReferenceEquals()?
-17. What is null-coalescing operator ??
+17. What is null-coalescing operator ???
 18. What is null-conditional operator ?.
 19. What is pattern matching?
 20. What is is operator?
@@ -408,9 +410,9 @@
 34. What is a nullable type?
 35. Core constraints of REST?
 
-## 3. Object-Oriented Programming
+---
 
-**122 distinct questions**
+## Category 3: Object-Oriented Programming (122 Questions)
 
 1. What is operator overloading?
 2. What is method overloading?
@@ -535,9 +537,9 @@
 121. TPT/TPC/TPH inheritance mapping and trade-offs?
 122. Handle large object graphs and partial updates (PATCH/DTOs)?
 
-## 4. Collections, Iterators & Generics
+---
 
-**113 distinct questions**
+## Category 4: Collections, Iterators & Generics (113 Questions)
 
 1. What is Array?
 2. What is ArrayList?
@@ -653,9 +655,9 @@
 112. Guarantee ordering (partitioning/sequence keys)?
 113. Difference between queues and topics?
 
-## 5. Delegates, Events, Lambdas & Functional C#
+---
 
-**64 distinct questions**
+## Category 5: Delegates, Events, Lambdas & Functional C# (64 Questions)
 
 1. Local functions?
 2. What is a delegate?
@@ -722,9 +724,9 @@
 63. Design replay for event-driven systems?
 64. Prevent brute-force attacks?
 
-## 6. LINQ & Expression Trees
+---
 
-**60 distinct questions**
+## Category 6: LINQ & Expression Trees (60 Questions)
 
 1. What is LINQ?
 2. Benefits of LINQ?
@@ -787,9 +789,9 @@
 59. Pagination patterns (cursor vs offset)?
 60. Limit memory usage on large queries (paging, streaming, projection)?
 
-## 7. Exception Handling & Error Management
+---
 
-**64 distinct questions**
+## Category 7: Exception Handling & Error Management (64 Questions)
 
 1. What is exception handling?
 2. try-catch block?
@@ -856,9 +858,9 @@
 63. Centralize exception handling in Web API?
 64. How does .NET handle exception cost internally?
 
-## 8. Async, Multithreading & Concurrency
+---
 
-**129 distinct questions**
+## Category 8: Async, Multithreading & Concurrency (129 Questions)
 
 1. What is a thread?
 2. Thread lifecycle?
@@ -990,9 +992,9 @@
 128. Safely cache async results?
 129. Difference between Task.Run and async I/O?
 
-## 9. Memory Management, GC & Resource Management
+---
 
-**108 distinct questions**
+## Category 9: Memory Management, GC & Resource Management (108 Questions)
 
 1. What is ref struct?
 2. What is Garbage Collection?
@@ -1103,9 +1105,9 @@
 107. What causes Gen 2 GC spikes?
 108. Stack-allocated structures (Span, stackalloc)?
 
-## 10. .NET Runtime, CLR & Advanced C# Internals
+---
 
-**44 distinct questions**
+## Category 10: .NET Runtime, CLR & Advanced C# Internals (44 Questions)
 
 1. Pointers in C#?
 2. Source Generators?
@@ -1152,9 +1154,9 @@
 43. Difference between JIT, EconoJIT and NGen?
 44. What is Tiered Compilation?
 
-## 11. Reflection, Attributes, Serialization & I/O
+---
 
-**24 distinct questions**
+## Category 11: Reflection, Attributes, Serialization & I/O (24 Questions)
 
 1. What is Reflection?
 2. Uses of Reflection?
@@ -1181,9 +1183,9 @@
 23. Benefits of ApiController attribute?
 24. Pitfalls in System.Text.Json serialization?
 
-## 12. Dependency Injection & Application Infrastructure
+---
 
-**12 distinct questions**
+## Category 12: Dependency Injection & Application Infrastructure (12 Questions)
 
 1. What is Dependency Injection?
 2. Benefits of DI?
@@ -1198,9 +1200,9 @@
 11. What is service lifetime?
 12. What is service lifetime issue?
 
-## 13. ASP.NET Core, Web API & Communication
+---
 
-**105 distinct questions**
+## Category 13: ASP.NET Core, Web API & Communication (105 Questions)
 
 1. What is ASP.NET Core?
 2. What is middleware?
@@ -1308,9 +1310,9 @@
 104. What is rate limiting and why do APIs need it?
 105. Role-based vs permission-based authorization?
 
-## 14. Entity Framework Core & Data Access
+---
 
-**41 distinct questions**
+## Category 14: Entity Framework Core & Data Access (41 Questions)
 
 1. What is EF Core?
 2. DbContext?
@@ -1354,9 +1356,9 @@
 40. Tune parameter sniffing issues?
 41. Multi-tenancy with EF Core (schema vs discriminator)?
 
-## 15. Design Patterns, SOLID & Clean Architecture
+---
 
-**50 distinct questions**
+## Category 15: Design Patterns, SOLID & Clean Architecture (50 Questions)
 
 1. What is singleton?
 2. What is repository pattern?
@@ -1409,9 +1411,9 @@
 49. Structure layers in Clean Architecture?
 50. CQRS pattern?
 
-## 16. DDD, Microservices, Messaging & Distributed Systems
+---
 
-**84 distinct questions**
+## Category 16: DDD, Microservices, Messaging & Distributed Systems (84 Questions)
 
 1. DDD principles?
 2. Ubiquitous language?
@@ -1498,9 +1500,9 @@
 83. What is dead-letter queue and handling?
 84. Migrate a large monolith to microservices without downtime—how?
 
-## 17. Docker, Kubernetes, DevOps & Observability
+---
 
-**84 distinct questions**
+## Category 17: Docker, Kubernetes, DevOps & Observability (84 Questions)
 
 1. What is IoC container?
 2. What is container orchestration?
@@ -1587,9 +1589,9 @@
 83. Ensure zero-downtime deployments in App Service?
 84. Implement distributed tracing across cloud services?
 
-## 18. Cloud Architecture, Security & Reliability
+---
 
-**97 distinct questions**
+## Category 18: Cloud Architecture, Security & Reliability (97 Questions)
 
 1. Azure architecture principles?
 2. AWS architecture principles?
@@ -1689,9 +1691,9 @@
 96. What is a nonce and where used?
 97. What is CSP (Content Security Policy)?
 
-## 19. System Design & Performance Engineering
+---
 
-**28 distinct questions**
+## Category 19: System Design & Performance Engineering (28 Questions)
 
 1. Design a payment system.
 2. Design an order management system.
@@ -1722,9 +1724,9 @@
 27. Design a multi-tenant SaaS architecture—data and isolation strategies?
 28. Design a high-availability global application with zero downtime?
 
-## 20. Testing, Leadership & Architecture Governance
+---
 
-**42 distinct questions**
+## Category 20: Testing, Leadership & Architecture Governance (42 Questions)
 
 1. What makes a good software architect?
 2. Architecture decision records?
@@ -1769,14 +1771,846 @@
 41. What is technical debt?
 42. Test resilience (chaos testing, fault injection)?
 
-## Suggested Preparation Order
+---
 
-1. C# fundamentals, types, operators, control flow, methods and OOP
-2. Collections, generics, delegates, events and LINQ
-3. Exception handling, async/await, threading and memory/GC
-4. CLR/runtime internals, advanced C# and performance
-5. Dependency injection, ASP.NET Core, Web API and EF Core
-6. SOLID, design patterns, clean architecture and DDD
-7. Microservices, messaging, resilience and distributed systems
-8. Docker, Kubernetes, DevOps, observability and cloud
-9. Security, system design, performance engineering and leadership
+## Category 21: ASP.NET MVC (Architect Level) (100 Questions)
+
+1. What is ASP.NET MVC?
+2. Explain the MVC design pattern.
+3. What are the advantages of ASP.NET MVC over Web Forms?
+4. What is the role of a Controller?
+5. What is the role of a View?
+6. What is the role of a Model?
+7. Explain the MVC request lifecycle.
+8. What is routing in MVC?
+9. What is the purpose of RouteConfig?
+10. What are attribute routes?
+11. What is convention-based routing?
+12. What is the difference between ViewData, ViewBag, and TempData?
+13. What are strongly typed views?
+14. What are HTML Helpers?
+15. What are Tag Helpers?
+16. What are Partial Views?
+17. What are Layout Pages?
+18. What are Sections in Razor?
+19. What is Razor syntax?
+20. How do you pass data from Controller to View?
+21. What is ActionResult?
+22. What are the different ActionResult types?
+23. Explain JsonResult.
+24. Explain FileResult.
+25. What is ContentResult?
+26. What is EmptyResult?
+27. What is RedirectResult?
+28. What is ViewResult?
+29. What are child actions?
+30. What are action filters?
+31. What are authorization filters?
+32. What are exception filters?
+33. What are result filters?
+34. What are resource filters?
+35. What is model binding?
+36. How does model binding work?
+37. What are custom model binders?
+38. What is the Bind attribute?
+39. What is over-posting?
+40. How do you prevent over-posting attacks?
+41. What is Data Annotation validation?
+42. What is client-side validation?
+43. What is server-side validation?
+44. What is ModelState?
+45. What is AntiForgeryToken?
+46. How does CSRF work?
+47. How do you prevent CSRF attacks?
+48. What is XSS?
+49. How do you prevent XSS in MVC?
+50. What is SQL Injection?
+51. How do you prevent SQL Injection?
+52. What is authentication?
+53. What is authorization?
+54. What is the difference between authentication and authorization?
+55. What is ASP.NET Identity?
+56. What are claims-based identities?
+57. What are roles in authorization?
+58. What is policy-based authorization?
+59. What is OAuth?
+60. What is OpenID Connect?
+61. What is Entity Framework?
+62. What is DbContext?
+63. What is DbSet?
+64. What is Code First?
+65. What is Database First?
+66. What is Model First?
+67. What are migrations?
+68. How do you apply migrations?
+69. What is lazy loading?
+70. What is eager loading?
+71. What is explicit loading?
+72. What is the N+1 query problem?
+73. How do you optimize EF performance?
+74. What is change tracking?
+75. How do you implement transactions in EF?
+76. What is output caching?
+77. What is response caching?
+78. What is distributed caching?
+79. What is in-memory caching?
+80. How do you improve MVC application performance?
+81. How do you optimize Razor views?
+82. How do you optimize database calls?
+83. What are asynchronous controllers?
+84. When should async/await be used?
+85. How do you diagnose performance bottlenecks?
+86. What is unit testing?
+87. How do you unit test controllers?
+88. What is mocking?
+89. What frameworks are used for testing MVC applications?
+90. What is dependency injection?
+91. How do you implement DI in MVC?
+92. What are the benefits of IoC containers?
+93. How would you structure a large enterprise MVC application?
+94. How do you implement Clean Architecture with MVC?
+95. How would you separate business logic from controllers?
+96. How do you design a multi-tenant MVC application?
+97. How would you secure an internet-facing MVC application?
+98. How do you handle logging and monitoring in MVC applications?
+99. How would you migrate an ASP.NET MVC application to ASP.NET Core?
+100. As an architect, when would you choose MVC versus Web API, Blazor, Angular, or React?
+
+---
+
+## Category 22: ASP.NET Core Web API (300 Questions)
+
+### Section 1: Web API Fundamentals (1-25)
+1. What is ASP.NET Core Web API?
+2. What are RESTful services?
+3. What are the principles of REST architecture?
+4. What are HTTP methods?
+5. Explain GET, POST, PUT, PATCH, and DELETE.
+6. What is idempotency?
+7. What is statelessness?
+8. What is a resource in REST?
+9. What is URI design?
+10. What is content negotiation?
+11. What is MIME type?
+12. What are HTTP status codes?
+13. Difference between 200 and 201?
+14. Difference between 400 and 422?
+15. Difference between 401 and 403?
+16. Difference between 404 and 204?
+17. What is a REST constraint?
+18. What are HATEOAS principles?
+19. What is Richardson Maturity Model?
+20. SOAP vs REST?
+21. What is JSON?
+22. What is XML serialization?
+23. What is Web API versioning?
+24. What are Minimal APIs?
+25. When should you use Web APIs?
+
+### Section 2: ASP.NET Core Basics (26-50)
+26. Explain the ASP.NET Core architecture.
+27. What is Kestrel?
+28. What is IIS Integration?
+29. What is the Generic Host?
+30. What is the role of Program.cs?
+31. What is dependency injection?
+32. Explain service registration.
+33. What are service lifetimes?
+34. Explain Singleton lifetime.
+35. Explain Scoped lifetime.
+36. Explain Transient lifetime.
+37. What is middleware?
+38. Explain the middleware pipeline.
+39. What is endpoint routing?
+40. What is configuration in ASP.NET Core?
+41. What is appsettings.json?
+42. What are environment variables?
+43. What are launch settings?
+44. What are secrets in ASP.NET Core?
+45. What is Options Pattern?
+46. What is IOptions?
+47. What is IOptionsSnapshot?
+48. What is IOptionsMonitor?
+49. Explain hosting environments.
+50. Development vs Production environment?
+
+### Section 3: Controllers and Routing (51-75)
+51. What is an API Controller?
+52. What does [ApiController] do?
+53. What is attribute routing?
+54. Conventional routing?
+55. Route constraints?
+56. Optional route parameters?
+57. Route tokens?
+58. What is IActionResult?
+59. ActionResult?
+60. JsonResult?
+61. StatusCodeResult?
+62. OkResult?
+63. CreatedResult?
+64. BadRequestResult?
+65. UnauthorizedResult?
+66. ForbidResult?
+67. NotFoundResult?
+68. NoContentResult?
+69. Difference between Ok() and Created()?
+70. What is CreatedAtAction()?
+71. What is CreatedAtRoute()?
+72. How are routes matched?
+73. What is route precedence?
+74. How do you handle route conflicts?
+75. Routing best practices?
+
+### Section 4: Model Binding and Validation (76-100)
+76. What is model binding?
+77. Explain binding sources.
+78. What is [FromBody]?
+79. What is [FromQuery]?
+80. What is [FromRoute]?
+81. What is [FromHeader]?
+82. What is [FromForm]?
+83. What is ModelState?
+84. How does validation work?
+85. What are data annotations?
+86. Explain [Required].
+87. Explain [StringLength].
+88. Explain [Range].
+89. Explain [RegularExpression].
+90. Custom validation attributes?
+91. FluentValidation?
+92. Validation filters?
+93. DTOs?
+94. Why use DTOs?
+95. AutoMapper?
+96. Manual mapping?
+97. Request validation strategies?
+98. Response validation?
+99. Preventing over-posting?
+100. Model binding best practices?
+
+### Section 5: Dependency Injection (101-120)
+101. What is dependency inversion?
+102. Benefits of DI?
+103. Constructor injection?
+104. Method injection?
+105. Property injection?
+106. Explain ServiceCollection.
+107. Explain ServiceProvider.
+108. Open generic registration?
+109. Factory registration?
+110. Multiple implementations?
+111. Keyed services?
+112. Lazy injection?
+113. Circular dependencies?
+114. Scoped services in Singleton?
+115. Service locator anti-pattern?
+116. What is IServiceScopeFactory?
+117. Background service dependencies?
+118. Configuration injection?
+119. Unit testing with DI?
+120. DI best practices?
+
+### Section 6: Middleware and Filters (121-145)
+121. What is middleware?
+122. Difference between Use() and Run()?
+123. What is Map()?
+124. Custom middleware?
+125. Middleware execution order?
+126. Exception middleware?
+127. Logging middleware?
+128. Authentication middleware?
+129. Authorization middleware?
+130. CORS middleware?
+131. Response compression middleware?
+132. What are filters?
+133. Authorization filter?
+134. Action filter?
+135. Exception filter?
+136. Result filter?
+137. Resource filter?
+138. Global filters?
+139. Filter execution order?
+140. Middleware vs Filters?
+141. Custom filters?
+142. Async filters?
+143. Dependency injection in filters?
+144. When to use middleware?
+145. When to use filters?
+
+### Section 7: Authentication and Authorization (146-180)
+146. Authentication vs Authorization?
+147. What is JWT?
+148. JWT structure?
+149. Claims?
+150. Roles?
+151. Policy-based authorization?
+152. Role-based authorization?
+153. Claims-based authorization?
+154. What is OAuth2?
+155. What is OpenID Connect?
+156. What is Microsoft Entra ID?
+157. What is Azure AD B2C?
+158. Cookie authentication?
+159. JWT authentication?
+160. Refresh tokens?
+161. Access tokens?
+162. Token expiration?
+163. Token revocation?
+164. Custom authorization handlers?
+165. Authorization requirements?
+166. MFA?
+167. Single Sign-On?
+168. API Key authentication?
+169. Certificate authentication?
+170. Secure secret storage?
+171. Azure Key Vault?
+172. What is HSTS?
+173. Preventing CSRF?
+174. Preventing XSS?
+175. HTTPS enforcement?
+176. Security headers?
+177. Identity framework?
+178. Authentication events?
+179. Multiple authentication schemes?
+180. Security best practices?
+
+### Section 8: Entity Framework Core with APIs (181-215)
+181. What is EF Core?
+182. DbContext?
+183. DbSet?
+184. Change tracking?
+185. AsNoTracking()?
+186. Code First?
+187. Database First?
+188. Migrations?
+189. Relationships?
+190. Eager loading?
+191. Lazy loading?
+192. Explicit loading?
+193. Include()?
+194. ThenInclude()?
+195. Transactions?
+196. SaveChangesAsync()?
+197. Optimistic concurrency?
+198. RowVersion?
+199. Raw SQL queries?
+200. Stored procedures?
+201. Query filters?
+202. Value converters?
+203. Shadow properties?
+204. Soft delete?
+205. Audit columns?
+206. Repository pattern?
+207. Unit of Work?
+208. IQueryable vs IEnumerable?
+209. N+1 problem?
+210. Split queries?
+211. Connection pooling?
+212. Compiled queries?
+213. Bulk operations?
+214. EF Core performance tuning?
+215. EF Core best practices?
+
+### Section 9: Logging and Exception Handling (216-230)
+216. What is ILogger?
+217. Log levels?
+218. Structured logging?
+219. Serilog?
+220. NLog?
+221. Global exception handling?
+222. ProblemDetails?
+223. Exception middleware?
+224. Logging correlation IDs?
+225. Request logging?
+226. Application Insights?
+227. OpenTelemetry?
+228. Distributed tracing?
+229. Health checks?
+230. Monitoring best practices?
+
+### Section 10: API Documentation and Versioning (231-245)
+231. What is Swagger?
+232. What is OpenAPI?
+233. How do you configure Swagger?
+234. Custom Swagger documentation?
+235. API Versioning?
+236. URL versioning?
+237. Header versioning?
+238. Query string versioning?
+239. Media type versioning?
+240. Deprecating APIs?
+241. Backward compatibility?
+242. Consumer-driven contracts?
+243. OpenAPI security definitions?
+244. Swagger examples?
+245. Documentation best practices?
+
+### Section 11: Performance and Scalability (246-270)
+246. Response caching?
+247. Output caching?
+248. Memory cache?
+249. Distributed cache?
+250. Redis?
+251. Compression middleware?
+252. Pagination?
+253. Cursor-based pagination?
+254. Streaming responses?
+255. Async programming benefits?
+256. Connection pooling?
+257. Database optimization?
+258. Query optimization?
+259. Rate limiting?
+260. API throttling?
+261. Load balancing?
+262. Horizontal scaling?
+263. Vertical scaling?
+264. Circuit breaker pattern?
+265. Retry pattern?
+266. Bulkhead pattern?
+267. Queue-based load leveling?
+268. CDN usage?
+269. High availability?
+270. Scalability best practices?
+
+### Section 12: Testing Web APIs (271-285)
+271. Unit testing controllers?
+272. Integration testing APIs?
+273. WebApplicationFactory?
+274. Mocking dependencies?
+275. Moq framework?
+276. Testing authentication?
+277. Testing authorization?
+278. Testing middleware?
+279. Testing filters?
+280. API contract testing?
+281. Postman collections?
+282. Newman?
+283. Load testing?
+284. Performance testing?
+285. Test automation strategies?
+
+### Section 13: Microservices and Architect-Level Questions (286-300)
+286. Monolith vs Microservices?
+287. API Gateway?
+288. Ocelot?
+289. YARP?
+290. Service discovery?
+291. RabbitMQ integration?
+292. Azure Service Bus integration?
+293. Event-driven architecture?
+294. CQRS with Web APIs?
+295. Saga pattern?
+296. Outbox pattern?
+297. Eventual consistency?
+298. Designing APIs for 1 million users?
+299. How would you secure enterprise APIs?
+300. How would you design a scalable, highly available ASP.NET Core Web API solution on Azure?
+
+---
+
+## Category 23: Entity Framework Core (150 Questions)
+
+### Part 1: Fundamentals, DbContext, Migrations, Modeling & Relationships (1-50)
+1. What is Entity Framework Core?
+2. What are the advantages of using EF Core?
+3. What is an ORM?
+4. How does EF Core differ from Entity Framework 6?
+5. What databases are supported by EF Core?
+6. What is the role of DbContext?
+7. What is DbSet<T>?
+8. How does EF Core track entities?
+9. What is the EF Core change tracker?
+10. What is the purpose of SaveChanges()?
+11. What is the difference between SaveChanges() and SaveChangesAsync()?
+12. What is the EF Core provider model?
+13. What are the different approaches supported by EF Core?
+14. What is Code First?
+15. What is Database First?
+16. How do you configure a DbContext in ASP.NET Core?
+17. What is the purpose of OnConfiguring()?
+18. What is the purpose of OnModelCreating()?
+19. How do you register DbContext using Dependency Injection?
+20. Why is DbContext typically registered as Scoped?
+21. What problems occur if DbContext is registered as Singleton?
+22. What is DbContextOptions<TContext>?
+23. How do you configure connection strings?
+24. What is DbContextFactory?
+25. When should IDbContextFactory<T> be used?
+26. What are migrations in EF Core?
+27. Why are migrations important?
+28. What command creates a migration?
+29. What command applies migrations to the database?
+30. What command removes the last migration?
+31. What is a migration snapshot?
+32. What happens when multiple developers create migrations simultaneously?
+33. How do you resolve migration conflicts?
+34. Can migrations be customized?
+35. What are best practices for migrations in production?
+36. What are Data Annotations?
+37. What is Fluent API?
+38. Difference between Data Annotations and Fluent API?
+39. When should Fluent API be preferred?
+40. How do you configure table names using Fluent API?
+41. How do you configure column names?
+42. How do you configure required fields?
+43. How do you configure maximum lengths?
+44. How do you configure default values?
+45. How do you configure indexes?
+46. What is a primary key?
+47. What are conventions used by EF Core to identify primary keys?
+48. What is a composite key?
+49. What is an alternate key?
+50. What is a foreign key?
+
+### Part 2: Performance, Query Optimization, Transactions & Concurrency (51-100)
+51. How do you identify EF Core performance bottlenecks in production?
+52. What metrics would you monitor for EF Core applications?
+53. How do you inspect SQL generated by EF Core?
+54. What tools do you use to analyze slow queries?
+55. What is the N+1 query problem?
+56. How would you detect N+1 issues before production?
+57. How do eager loading and explicit loading affect performance?
+58. Why can lazy loading be dangerous in APIs?
+59. When should AsNoTracking() be used?
+60. What are the trade-offs of using AsNoTracking()?
+61. What is projection, and why is it important?
+62. How does projecting into DTOs improve performance?
+63. When should Select() be preferred over Include()?
+64. What is query splitting?
+65. When would you use AsSplitQuery()?
+66. When would AsSingleQuery() be preferable?
+67. What are compiled queries?
+68. Under what conditions do compiled queries provide benefits?
+69. How would you benchmark EF Core query performance improvements?
+70. What EF Core guidelines would you establish for high-throughput applications?
+71. How do database indexes impact EF Core performance?
+72. How do you determine whether a query requires an index?
+73. What is the difference between clustered and non-clustered indexes?
+74. How can EF Core configure indexes?
+75. What are composite indexes?
+76. What are the risks of excessive indexing?
+77. How do you review SQL execution plans?
+78. What indicators in an execution plan suggest performance problems?
+79. How would you optimize queries performing table scans?
+80. How do you collaborate with DBAs when tuning EF Core applications?
+81. How does EF Core Change Tracking work internally?
+82. What overhead does Change Tracking introduce?
+83. When should tracking queries be preferred?
+84. When should non-tracking queries be the default?
+85. What is AsNoTrackingWithIdentityResolution()?
+86. How would you design a reporting system using EF Core tracking strategies?
+87. How does EF Core manage transactions by default?
+88. What is the purpose of BeginTransaction()?
+89. When should explicit transactions be used?
+90. What are distributed transactions?
+91. Why are distributed transactions problematic in microservices?
+92. What strategies can replace distributed transactions?
+93. How would you maintain consistency across multiple services without two-phase commits?
+94. What is optimistic concurrency?
+95. Why does EF Core favor optimistic concurrency over pessimistic concurrency?
+96. How do concurrency tokens work?
+97. What is a RowVersion column?
+98. How do you configure optimistic concurrency using RowVersion?
+99. How would you handle a DbUpdateConcurrencyException in an enterprise application?
+100. Two users update the same record simultaneously. How would you design the conflict resolution process?
+
+### Part 3: Patterns, Multi-Tenancy, Auditing, Scaling & Cloud-Native (101-150)
+101. What problem does the Repository Pattern aim to solve?
+102. Is DbContext already an implementation of Repository and Unit of Work?
+103. When does adding a custom repository provide value?
+104. What are the drawbacks of generic repositories?
+105. When should you avoid the Repository Pattern with EF Core?
+106. How would you structure repositories in a large enterprise application?
+107. Should repositories expose IQueryable? Why or why not?
+108. How do you prevent business logic from leaking into repositories?
+109. How would you unit test repository implementations?
+110. What standards would you establish for repository usage across multiple teams?
+111. What are global query filters?
+112. How do you implement soft deletes using EF Core?
+113. What are the business advantages of soft deletes?
+114. What operational risks do soft deletes introduce?
+115. How can global query filters impact performance?
+116. How would you allow administrators to bypass soft-delete filters?
+117. How do global query filters support multi-tenancy?
+118. What governance rules would you establish around data retention and soft deletes?
+119. What information should be captured for auditing?
+120. How would you automatically populate CreatedDate and ModifiedDate fields?
+121. Would you implement auditing in entities, interceptors, or the database? Why?
+122. What are EF Core interceptors?
+123. How can SaveChanges interceptors be used for auditing?
+124. How would you capture the identity of the user making changes?
+125. How would you implement a complete audit trail for regulatory compliance?
+126. When should database-native auditing be preferred over application-level auditing?
+127. What is multi-tenancy?
+128. What are the common multi-tenancy models?
+129. What are the advantages of a database-per-tenant approach?
+130. What are the disadvantages of a database-per-tenant approach?
+131. What are the advantages of a shared database with a TenantId discriminator?
+132. What risks exist in a shared-database approach?
+133. How would you enforce tenant isolation in EF Core?
+134. How can global query filters support tenant isolation?
+135. How would you migrate thousands of tenant databases safely?
+136. What multi-tenancy model would you choose for a SaaS platform serving small businesses, and why?
+137. Why can SaveChanges() become inefficient for bulk operations?
+138. How would you handle importing millions of records efficiently?
+139. What techniques would you use for bulk updates?
+140. What trade-offs exist between EF Core and specialized bulk libraries?
+141. When would you bypass EF Core entirely for data-loading scenarios?
+142. How would you design a high-throughput data ingestion pipeline?
+143. How would you scale read-heavy EF Core applications?
+144. What is a read replica, and how would EF Core use it?
+145. When would CQRS be appropriate in an EF Core-based system?
+146. How would you separate read and write workloads?
+147. What caching strategies work well with EF Core applications?
+148. How would you maintain cache consistency when data changes?
+149. How would you design EF Core data access for a cloud-native microservices environment?
+150. What EF Core architectural principles would you mandate for applications expected to scale to millions of users?
+
+---
+
+## Category 24: Microservices & System Design (150 Questions)
+
+### Part 1: Fundamentals, DDD, Service Communication, API Gateway & Discovery (1-50)
+1. What are microservices?
+2. How do microservices differ from monolithic architectures?
+3. What business problems do microservices solve?
+4. What are the advantages of microservices?
+5. What are the disadvantages of microservices?
+6. When should you avoid microservices?
+7. What characteristics define a well-designed microservice?
+8. What is independent deployability?
+9. Why is decentralized data management important in microservices?
+10. What are the operational challenges of microservices?
+11. What organizational factors influence microservice adoption?
+12. What is Conway's Law?
+13. How does Conway's Law affect architecture decisions?
+14. What are bounded contexts?
+15. Why should each microservice own its data?
+16. What is Domain-Driven Design (DDD)?
+17. What is the difference between strategic and tactical DDD?
+18. What is a domain?
+19. What is a subdomain?
+20. What are core, supporting, and generic subdomains?
+21. What is a bounded context?
+22. How do bounded contexts help in microservice design?
+23. What is the ubiquitous language?
+24. What are entities in DDD?
+25. What are value objects in DDD?
+26. How do you identify microservice boundaries?
+27. What are the dangers of decomposing services too early?
+28. What are the risks of overly large microservices?
+29. What are the risks of overly small microservices?
+30. How would you decompose an e-commerce platform into services?
+31. What factors determine service granularity?
+32. What is the "database-per-service" pattern?
+33. Why should microservices avoid sharing databases?
+34. When might a shared database be temporarily acceptable?
+35. How do you migrate from a monolith to microservices?
+36. What communication styles exist in microservices?
+37. What is synchronous communication?
+38. What is asynchronous communication?
+39. What are the advantages of synchronous communication?
+40. What are the disadvantages of synchronous communication?
+41. What are the advantages of asynchronous communication?
+42. What are the disadvantages of asynchronous communication?
+43. What is an API Gateway?
+44. What responsibilities should an API Gateway have?
+45. What responsibilities should an API Gateway avoid?
+46. When would Backend-for-Frontend (BFF) patterns be useful?
+47. What is service discovery?
+48. What is the difference between client-side and server-side service discovery?
+49. How does service discovery work in Kubernetes?
+50. What considerations influence your choice of service discovery mechanism?
+
+### Part 2: Messaging, Event-Driven, CQRS, Resilience, Security, Observability (51-100)
+51. What is event-driven architecture?
+52. How does event-driven architecture differ from request-response systems?
+53. What is a message broker?
+54. What problems do message brokers solve?
+55. What is the difference between a queue and a topic?
+56. What is RabbitMQ?
+57. When would you choose RabbitMQ?
+58. What is Kafka?
+59. When would you choose Kafka?
+60. What is Azure Service Bus?
+61. When would Azure Service Bus be preferable?
+62. What is message durability?
+63. What is at-least-once delivery?
+64. What is at-most-once delivery?
+65. What is exactly-once delivery, and why is it challenging?
+66. What is idempotency?
+67. Why is idempotency important in distributed systems?
+68. What is a dead-letter queue (DLQ)?
+69. When should messages be moved to a DLQ?
+70. What is message retry logic?
+71. What risks are associated with aggressive retry strategies?
+72. What is the Outbox Pattern?
+73. What problem does the Outbox Pattern solve?
+74. What is the Inbox Pattern?
+75. How do Outbox and Inbox patterns improve reliability?
+76. What is CQRS (Command Query Responsibility Segregation)?
+77. What problems does CQRS address?
+78. What are the trade-offs of CQRS?
+79. When should CQRS be avoided?
+80. What is Event Sourcing?
+81. How does Event Sourcing differ from traditional CRUD?
+82. What are the advantages of Event Sourcing?
+83. What are the disadvantages of Event Sourcing?
+84. Can CQRS exist without Event Sourcing?
+85. Can Event Sourcing exist without CQRS?
+86. Why are distributed transactions difficult in microservices?
+87. What is eventual consistency?
+88. What is the Saga Pattern?
+89. What is the difference between choreography and orchestration sagas?
+90. How would you decide between choreography and orchestration?
+91. What is caching?
+92. What is the difference between in-memory caching and distributed caching?
+93. When should Redis be used?
+94. How do you maintain cache consistency?
+95. What cache invalidation strategies are commonly used?
+96. How should authentication be handled in microservices?
+97. What is the role of JWT tokens in distributed systems?
+98. How would you implement authorization across multiple services?
+99. What are the three pillars of observability?
+100. Why is distributed tracing important in microservices?
+
+### Part 3: Cloud-Native, Production Readiness, Governance & Scenarios (101-150)
+101. How do you approach a system design interview?
+102. What functional requirements should be clarified before designing a system?
+103. What non-functional requirements should be identified?
+104. How do you estimate system capacity?
+105. How do you estimate requests per second (RPS)?
+106. How do you determine storage requirements?
+107. How do you identify bottlenecks in a proposed design?
+108. How do you prioritize scalability, availability, consistency, and cost?
+109. What trade-offs are commonly encountered in distributed systems?
+110. How do you document architectural decisions?
+111. How would you design a URL shortening service?
+112. How would you design a notification platform?
+113. How would you design a chat application?
+114. How would you design an e-commerce platform?
+115. How would you design an order management system?
+116. How would you design a payment processing system?
+117. How would you design a document management platform?
+118. How would you design a learning management system (LMS)?
+119. How would you design a multi-tenant SaaS application?
+120. How would you design an API serving millions of users daily?
+121. Why are containers valuable in microservices architectures?
+122. What problems does Kubernetes solve?
+123. What is a Kubernetes Pod?
+124. What is a Deployment?
+125. What is a Service in Kubernetes?
+126. What is Horizontal Pod Autoscaling (HPA)?
+127. How do readiness and liveness probes differ?
+128. How would you design a rolling deployment strategy?
+129. What is a service mesh, and when would it be useful?
+130. What operational challenges does Kubernetes introduce?
+131. What is high availability?
+132. How is high availability different from disaster recovery?
+133. What is a single point of failure?
+134. What are Recovery Time Objective (RTO) and Recovery Point Objective (RPO)?
+135. How would you design for fault tolerance?
+136. What strategies improve resilience in cloud-native applications?
+137. How do you prepare microservices for production?
+138. What metrics should be monitored across services?
+139. How would you investigate a production outage affecting multiple services?
+140. How do you conduct a root cause analysis (RCA)?
+141. What information should be included in a postmortem report?
+142. How do you prevent recurring incidents?
+143. How do you balance scalability with cost efficiency?
+144. What architectural choices can unnecessarily increase cloud costs?
+145. How would you establish governance standards across multiple teams?
+146. How do you evaluate whether a new technology is worth adopting?
+147. E-Commerce Platform Scenario: Design an Amazon-like marketplace expected to handle 10 million users.
+148. Banking System Scenario: Design a digital banking platform with strict audit requirements.
+149. SaaS Platform Scenario: Design a B2B SaaS platform serving 20,000 customers with varying compliance requirements.
+150. Chief Architect Scenario: You are responsible for 30 development teams building microservices independently.
+
+---
+
+## Category 25: Frontend (Angular/React) (9 Questions)
+
+1. Angular vs React — when should you choose each
+2. What causes unnecessary re-renders
+3. How would you implement lazy loading
+4. State Management — when is it needed
+5. How would you improve frontend performance
+6. How would you structure large frontend architecture
+7. What is the difference between Observables and Promises
+8. How would you handle route guards / protected routes
+9. Middleware vs Filters vs Endpoint Filters
+
+---
+
+## Category 26: SQL Server & Database (11 Questions)
+
+1. Clustered vs Non-Clustered Index
+2. How would you optimize slow queries
+3. What SELECTs cause performance issues
+4. CTE vs Temp Tables
+5. How would you design scalable DB architecture
+6. How would you handle large data migrations
+7. Normalization vs Denormalization
+8. How would you handle massive table partitions
+9. Stored Procedure vs Function — differences
+10. How would you handle large data migrations
+11. How would you handle massive table partitions
+
+---
+
+## Category 27: Soft Skills (5 Questions)
+
+1. Tell me about yourself
+2. Why do you want to join Accenture
+3. How do you handle pressure
+4. Describe a challenging situation
+5. How do you work in a team
+
+---
+
+## 📊 Quick Reference Card
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    INTERVIEW QUESTION BANK                  │
+│                        2,317 Questions                      │
+├─────────────────────────────────────────────────────────────┤
+│  C# Fundamentals              │  324  ████████████░░░░░░░  │
+│  ASP.NET Core Web API         │  300  ███████████░░░░░░░░  │
+│  Microservices & System Des.  │  150  ██████░░░░░░░░░░░░░  │
+│  Entity Framework Core        │  150  ██████░░░░░░░░░░░░░  │
+│  Async & Concurrency          │  129  █████░░░░░░░░░░░░░░  │
+│  OOP                          │  122  █████░░░░░░░░░░░░░░  │
+│  Collections & Generics       │  113  ████░░░░░░░░░░░░░░░  │
+│  Memory Management            │  108  ████░░░░░░░░░░░░░░░  │
+│  ASP.NET MVC                  │  100  ████░░░░░░░░░░░░░░░  │
+│  Cloud & Security             │   97  ████░░░░░░░░░░░░░░░  │
+│  DDD & Microservices          │   84  ███░░░░░░░░░░░░░░░░  │
+│  Docker & K8s                 │   84  ███░░░░░░░░░░░░░░░░  │
+│  LINQ & Expression Trees      │   60  ██░░░░░░░░░░░░░░░░░  │
+│  Design Patterns & SOLID      │   50  ██░░░░░░░░░░░░░░░░░  │
+│  .NET Runtime & CLR           │   44  ██░░░░░░░░░░░░░░░░░  │
+│  Architecture Governance      │   42  ██░░░░░░░░░░░░░░░░░  │
+│  EF Core Data Access          │   41  ██░░░░░░░░░░░░░░░░░  │
+│  Types & Operators            │   35  █░░░░░░░░░░░░░░░░░░  │
+│  System Design                │   28  █░░░░░░░░░░░░░░░░░░  │
+│  Reflection & Serialization   │   24  █░░░░░░░░░░░░░░░░░░  │
+│  Dependency Injection         │   12  ░░░░░░░░░░░░░░░░░░░  │
+│  SQL Server                   │   11  ░░░░░░░░░░░░░░░░░░░  │
+│  Frontend                     │    9  ░░░░░░░░░░░░░░░░░░░  │
+│  Soft Skills                  │    5  ░░░░░░░░░░░░░░░░░░░  │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 💡 Recommended Study Order
+
+1. **Foundation:** C# Fundamentals → Types & Operators → OOP
+2. **Core Concepts:** Collections → Delegates/Events → LINQ
+3. **Advanced:** Exception Handling → Async/Concurrency → Memory Management
+4. **Web Development:** ASP.NET Core Web API → ASP.NET MVC
+5. **Data Access:** Entity Framework Core → SQL Server
+6. **Architecture:** Design Patterns → DDD → Microservices → System Design
+7. **DevOps:** Docker → Kubernetes → Cloud Architecture → Security
+8. **Leadership:** Testing → Governance → Soft Skills
